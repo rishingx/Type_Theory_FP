@@ -1,15 +1,5 @@
 /* === Assignment 1: Implementation of Sets as Lists with no duplicates === */
 
-/* Function Descriptions
-
-del(X, L1, L2)      delete element X from a list L1 to obtain L2
-remdups(L, L1)      remove duplicates from a list L to obtain L2
-unionI()
-append()
-
-
-*/
-
 /* === Memership Function: mem === */
 
 mem(X, [X|_])               :-      !.

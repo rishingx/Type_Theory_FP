@@ -37,7 +37,7 @@ append([X|R], L, [X|Z])     :-      append(R, L, Z).
 mapcons(_, [], [])              :-      !.
 mapcons(X, [Y|R], [[X|Y] | Z])  :-      mapcons(X, R, Z).
 
-/*  === Power Function: powerI === */
+/* === Power Function: powerI === */
 
 powerI([], [ [] ])          :-      !.
 powerI([X|R], P)            :-      powerI(R, P1), mapcons(X, P1, P2), append(P2, P1, P).

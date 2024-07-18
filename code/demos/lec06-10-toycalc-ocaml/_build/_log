@@ -1,0 +1,21 @@
+### Starting build.
+# Target: tests.ml.depends, tags: { extension:ml, file:tests.ml, ocaml, ocamldep, quiet }
+/home/rishi/.opam/default/bin/ocamldep.opt -modules tests.ml > tests.ml.depends
+# Target: expression.ml.depends, tags: { extension:ml, file:expression.ml, ocaml, ocamldep, quiet }
+/home/rishi/.opam/default/bin/ocamldep.opt -modules expression.ml > expression.ml.depends
+# Target: operator.ml.depends, tags: { extension:ml, file:operator.ml, ocaml, ocamldep, quiet }
+/home/rishi/.opam/default/bin/ocamldep.opt -modules operator.ml > operator.ml.depends
+# Target: expression.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:expression.cmo, file:expression.ml, implem, ocaml, quiet }
+/home/rishi/.opam/default/bin/ocamlc.opt -c -o expression.cmo expression.ml
+# Target: operator.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:operator.cmo, file:operator.ml, implem, ocaml, quiet }
+/home/rishi/.opam/default/bin/ocamlc.opt -c -o operator.cmo operator.ml
+# Target: tests.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:tests.cmo, file:tests.ml, implem, ocaml, quiet }
+/home/rishi/.opam/default/bin/ocamlc.opt -c -o tests.cmo tests.ml
++ /home/rishi/.opam/default/bin/ocamlc.opt -c -o tests.cmo tests.ml
+File "tests.ml", line 2, characters 5-11:
+2 | open OUnit2
+         ^^^^^^
+Error: Unbound module OUnit2
+Hint: Did you mean Unit?
+Command exited with code 2.
+# Compilation unsuccessful.
